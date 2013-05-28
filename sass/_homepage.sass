@@ -1,4 +1,5 @@
 header
+	background: $color-body
 	.wrap
 		position: relative
 	h1 a
@@ -74,6 +75,7 @@ header
 		margin-top: emCalc(25px, 20px)
 		padding: emCalc(10px, 20px) emCalc(25px, 20px)
 
+/* Introduction on top */
 .introduction
 	margin-bottom: 0
 	padding-top: emCalc(50px)
@@ -110,3 +112,91 @@ header
 			background: $font-color
 	a
 		color: $font-color
+
+/* Home Features - rich content, two way communication, and blog-review */
+.home-features
+	article
+		@extend %clearfix
+		padding: emCalc(50px) 0
+	h1
+		margin-bottom: emCalc(10px, 48px)
+		font-size: emCalc(48px)
+		font-weight: 600
+	h2
+		margin-bottom: 0
+		font-weight: 600
+	ul
+		@extend %clear-list
+		li
+			min-height: emCalc(135px)
+			padding-left: emCalc(30px)
+			margin-bottom: emCalc(30px)
+			&:first-child
+				margin-bottom: emCalc(20px)
+		.img-icon
+			width: 126px
+			float: left
+			margin-right: emCalc(20px)
+		p
+			margin-top: 0
+
+	.iphone
+		width: 294px
+		margin-right: 20px
+		position: relative
+	.feature-lists
+		width: 675px
+
+.rich-content
+	.iphone
+		float: left
+	.feature-lists
+		float: right	
+
+.iphone-screen
+	width: 254px
+	height: 446px
+	position: absolute
+	top: 87px
+	left: 19px
+	background: red
+
+.communication-content
+	ul li
+		padding: 0 emCalc(30px) 0 0
+		.img-icon
+			width: 143px
+	.iphone
+		float: right
+	.feature-lists
+		float: left	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
