@@ -2,15 +2,18 @@ header
 	background: $color-body
 	.wrap
 		position: relative
-	h1 a
-		+handWritingBold
-		+retina-image("logo-newhome", 108px , 77px, no-repeat)
-		display: inline-block
-		margin-top: emCalc(10px, 56px)
-		padding: emCalc(73px, 56px) emCalc(10px, 56px) emCalc(10px, 56px) emCalc(110px, 56px)
-		font-size: emCalc(44px, 36px) // H1 is 36px by default
-		font-weight: 100
-		color: $font-color
+	h1
+		margin-bottom: 0
+		padding: emCalc(8px, 44px) 0 emCalc(10px, 44px)
+		a
+			+handWritingBold
+			+retina-image("logo-newhome", 108px , 77px, no-repeat)
+			display: inline-block
+			margin-top: emCalc(10px, 44px)
+			padding: emCalc(47px, 44px) emCalc(10px, 44px) emCalc(10px, 44px) emCalc(85px, 44px)
+			font-size: emCalc(44px, 36px) // H1 is 36px by default
+			font-weight: 100
+			color: $font-color
 	.menu
 		position: absolute
 		right: 0
@@ -123,29 +126,37 @@ header
 		font-size: emCalc(48px)
 		font-weight: 600
 	h2
-		margin-bottom: 0
+		margin-bottom: emCalc(5px, 30px)
 		font-weight: 600
 	ul
 		@extend %clear-list
 		li
-			min-height: emCalc(135px)
-			padding-left: emCalc(30px)
-			margin-bottom: emCalc(30px)
-			&:first-child
-				margin-bottom: emCalc(20px)
+			//min-height: emCalc(135px)
+			padding-left: emCalc(50px)
+			margin-bottom: emCalc(50px)
+			&.active // Replace with icon
+				background: url("../images/arrow-active.png") no-repeat left center
 		.img-icon
 			width: 126px
 			float: left
 			margin-right: emCalc(20px)
 		p
+			font-size: emCalc(18px)
+			line-height: emCalc(26px, 18px)
 			margin-top: 0
 
-	.iphone
-		width: 294px
-		margin-right: 20px
-		position: relative
-	.feature-lists
-		width: 675px
+.iphone
+	width: 294px
+	margin-right: 20px
+	position: relative
+
+.feature-lists
+	width: 675px
+
+.introtext
+	font-size: emCalc(22px)
+	line-height: emCalc(30px, 22px)
+	margin: 0 0 emCalc(40px, 22px)
 
 .rich-content
 	.iphone
