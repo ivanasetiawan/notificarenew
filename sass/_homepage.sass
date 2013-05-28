@@ -77,9 +77,15 @@ header
 .introduction
 	margin-bottom: 0
 	padding-top: emCalc(50px)
-	min-height: emCalc(480px)
 	background: $color-blue
 	color: #fff
+	.wrap
+		position: relative
+		min-height: emCalc(445px)
+	.hand
+		right: 0
+		bottom: 0
+		position: absolute
 	h1
 		font-size: emCalc(60px)
 		line-height: emCalc(70px, 60px)
@@ -91,6 +97,8 @@ header
 	.text
 		width: 46% // 460px
 		line-height: 2em
+		p
+			margin-right: 10%
 	.action
 		@extend %btn-darkblue
 		+border-radius($default-radius)
