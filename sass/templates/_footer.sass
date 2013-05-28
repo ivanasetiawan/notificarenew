@@ -1,0 +1,85 @@
+// Footer
+#mainfooter
+	@extend %clearfix
+	margin-top: emCalc(80px)
+	padding-top: emCalc(40px)
+	background: $color-body
+	line-height: emCalc(24px)
+
+	.wrap
+		position: relative
+		padding: 0
+		overflow: hidden
+
+	ul
+		@extend %clear-list
+
+.about-notificare
+	float: left
+	> div
+		width: emCalc(220px)
+		float: left
+
+	h2
+		margin-bottom: 0
+		font-size: emCalc(22px)
+		font-weight: 400
+	p
+		margin: 0 0 emCalc(10px)
+
+.menu-footer
+	width: emCalc(290px)
+	float: right
+	padding-left: emCalc(30px)
+	border-left: solid 1px $color-brown
+	a
+		text-decoration: underline
+	.navi, .users
+		width: 50%
+		float: left
+		margin-bottom: emCalc(30px) !important
+	.get-support
+		clear: left
+
+.copyright
+	clear: left
+	font-size: emCalc(12px)
+	line-height: emCalc(20px, 12px)
+	margin-bottom: emCalc(20px, 12px)
+
+	.love
+		+data-uri-bg("i-love.png")
+		width: 11px
+		height: 10px
+		margin: 0 3px
+		display: inline-block
+		text-indent: -9999px
+
+.socnet
+	@extend %clear-list
+	clear: both
+	float: left
+	margin: emCalc(-73px) 0 emCalc(20px) emCalc(-10px) !important
+
+	li
+		float: left
+		margin-left: emCalc(10px)
+
+	a
+		@extend %circle-shape
+		width: emCalc(30px, 24px)
+		height: emCalc(30px, 24px)
+		background: $font-color
+		text-align: center
+		font-size: 24px
+		line-height: emCalc(36px, 24px)
+		color: #fff
+		text-decoration: none
+		+opacity(0.5)
+
+		&:hover
+			+opacity(0.7)
+
+	@each $social in vimeo, twitter, rss, facebook, linkedin, googleplus, youtube
+		.#{$social}
+			+icon("i-#{$social}")

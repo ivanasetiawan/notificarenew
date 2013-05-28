@@ -1,0 +1,281 @@
+.fb-app
+	width: 32%
+	float: right
+
+.star
+	width: 94.5px
+	height: 18px
+	position: absolute
+	bottom: 15px
+	+data-uri-bg("bg-stars.png", no-repeat)
+	overflow: hidden
+
+	&.zero
+		background-position: -95px 0
+	&.one
+		background-position: -76px 0
+	&.two
+		background-position: -56px 0
+	&.three
+		background-position: -36px 0
+	&.four
+		background-position: -18px 0
+	&.five
+		background-position: 0px 0
+
+.circle
+	overflow: hidden
+	+border-radius(50%)
+	border: solid 5px #fff
+	display: inline-block
+
+.logout
+	top: 16px
+	right: 20px
+	position: absolute
+	line-height: 1
+
+.socnet
+	margin: 40px 0px 0px 10px
+
+	li
+		float: left
+		margin-left: 10px
+
+	a
+		width: 25px
+		height: 26px
+		display: block
+		+hide-text
+
+		&:hover
+			+opacity(0.7)
+
+	@each $soc in twitter, facebook
+		.#{$soc}
+			+data-uri-bg("i-#{$soc}-small.png", no-repeat)
+
+.container
+	position: relative
+	padding: 20px
+	background: #fff
+
+	h2
+		margin-bottom: 20px
+		//font-size: 5em
+		font-weight: 300
+		line-height: 1
+
+	.add-service
+		top: 20px
+		right: 20px
+		position: absolute
+		padding: 15px 30px
+		//font-size: 2.4em
+
+.buttons-action
+	margin-bottom: 30px
+	//font-size: 2.4em
+	font-weight: 300
+	text-align: center
+
+	a
+		padding: 20px 55px
+
+.intro-statistic
+	min-height: 212px
+	float: left
+	background: #e9f3f5
+
+	p
+		margin: 10px
+
+// Notification
+.notice
+	padding: 10px 15px
+	margin-bottom: 20px
+	+border-radius(2px)
+	background: $color-green
+	color: #fff
+
+	&.error
+		background: #ce2626
+
+.error
+	color: #fff
+	font-weight: bold
+	//font-size: 1.2em
+
+.pagination
+	float: right
+
+	a
+		width: 25px
+		height: 25px
+		display: inline-block
+		margin-left: 15px
+		+border-radius(2px)
+
+		&:first-child
+			margin-left: 0
+
+		&:hover
+			+opacity(0.7)
+
+	@each $action in prev, next
+		.#{$action}
+			+data-uri-bg("i-#{$action}.png", $font-color center no-repeat)
+
+.open,
+.close
+	width: 32px
+	height: 17px
+	display: block
+	+hide-text
+
+.open
+	+data-uri-bg("i-show.png")
+
+.close
+	+data-uri-bg("i-hide.png")
+
+.play
+	width: 19px
+	height: 18px
+	display: block
+	bottom: 14px
+	left: 305px
+	position: absolute
+	+hide-text
+	+data-uri-bg("b-play.png", no-repeat)
+	+opacity(0.5)
+
+	&:hover
+		+opacity(0.9)
+
+.social-buttons
+	margin: 30px 0 0 0
+
+
+.faq-list
+	margin: 0
+	padding: 10px 0 10px 0
+	overflow: hidden
+
+	dt
+		padding: 1px 0 0 0
+		overflow: hidden
+
+		a, a:hover, a:active
+			padding: 0 24px 0 8px
+			color: #fff
+			border: 0
+			text-decoration: none
+			display: block
+			height: 40px
+			line-height: 40px
+			overflow: hidden
+			cursor: pointer
+			//font-size: 2em
+			font-weight: 100
+
+
+		a:hover
+			background: $color-blue
+
+		a:active, a:link, .active a:visited
+			background: $color-blue
+
+		.active a:hover, .active a:active
+			background: $color-blue
+
+		.single a
+			background: $color-blue !important
+			cursor: default
+
+	dd
+		height: 0
+		position: absolute
+		overflow: hidden
+		display: none
+
+		p, dl
+			padding: 4px 16px
+			//font-size: 1.5em
+			font-weight: 100
+			color: #000
+
+	.active
+		height: auto
+		position: relative
+		margin: 0
+		padding-bottom: 10px
+		display: block
+
+	dd, dl, dd
+		height: auto
+		position: relative
+
+#testimonials-box
+
+	.carousel
+
+		.carousel-loader
+			margin-top: 200px
+			left: 35%
+			position: absolute
+			z-index: 10
+
+			li
+				float: left
+				margin-left: 5px
+
+				&:first-child
+					margin-left: 0
+
+				&.active a,
+				&:hover a
+					opacity: 1
+
+			a
+				width: 10px
+				height: 10px
+				display: block
+				background: $color-blue
+				opacity: 0.5
+				+border-radius(10px)
+				+hide-text
+
+				&.active a,
+				&:hover a
+					opacity: 1
+
+		.carousel-content
+
+			li
+				position: absolute
+				width: 620px
+				visibility: hidden
+
+				&.active
+					visibility: visible
+
+				h3
+					@extend .header3
+					//font-size: 3em
+					font-family: $font-family
+					font-weight: 100
+					padding: 20px
+					color: #000
+
+				p
+					width: 600px
+					//font-size: 1.5em
+					font-family: $font-family
+					padding-left: 5px
+					color: #000
+
+				img
+					float: left
+					margin: 20px 20px 0 0
+					+border-radius(150px)

@@ -1,0 +1,1239 @@
+// Dashboard
+.container
+	@extend %clearfix
+	position: relative
+	background: #fff
+
+	&.fullwidth
+		padding: emCalc(20px) emCalc(30px)
+
+	h2
+		margin-bottom: 20px
+		//font-size: 5em
+		font-weight: 300
+		line-height: 1
+
+	.add-service
+		@extend %btn-green
+		top: 17px
+		right: 32px
+		position: absolute
+		padding: emCalc(8px) emCalc(15px)
+		//font-size: 2.4em
+
+.dashboard-navi
+	width: 535px
+	height: 62px
+	top: 0
+	right: 0
+	position: absolute
+	padding: emCalc(10px)
+	background: #dcd3c9
+
+	ul
+		@extend %clear-list
+
+	li
+		float: left
+		margin-left: emCalc(15px)
+
+	> div
+		float: left
+
+	.signout
+		border-left: solid 1px #fff
+		padding-left: emCalc(15px)
+
+.dashboard-options
+	margin-top: emCalc(14px)
+	a
+		text-decoration: none
+		&:hover
+			color: #fff
+
+.app-switch
+	+icon("i-arrow-down", "after")
+		position: absolute
+		top: 1em
+		right: emCalc(10px, 20px)
+		font-size: emCalc(20px)
+		color: #fff
+	position: absolute
+	margin-left: emCalc(443px)
+	padding: emCalc(0px) emCalc(40px) emCalc(10px) emCalc(10px)
+	background: $color-brown
+	cursor: pointer
+	z-index: 2
+	&:first-child li
+		margin-bottom: 0px
+		
+	li
+		width: emCalc(40px)
+		float: none
+		margin: 0
+		overflow: hidden
+		margin-bottom: 0px
+
+
+		img
+			@extend %fleximage
+			+border-radius(6px)
+			float: left
+			margin-top: 10px
+
+		a
+			float: left
+			display: block
+			
+		.environment
+			position: absolute
+			float: right
+			color: $color-brown-darkest
+			padding: 0 5px 0 5px
+			text-align: center
+			margin: 5px 0 0 -5px
+			line-height: 1.6em
+			font-size: 0.6em
+			background: $color-blue-light
+			font-weight: 200
+			+border-radius(5px)
+		
+
+// Aside
+.container-side
+	width: emCalc(205px)
+	float: left
+
+.current-project
+	padding: emCalc(20px) emCalc(10px)
+	border-bottom: solid 1px $color-body
+
+	h2
+		margin-bottom: emCalc(10px)
+		font-size: 1em
+		font-weight: 500
+
+	img
+		width: emCalc(50px)
+		margin-bottom: emCalc(10px)
+
+.status
+	@extend %btn-styling
+	margin: 0 0 emCalc(20px)
+	line-height: 1
+
+	&.in-dev
+		background: $color-red
+
+.compose-msg
+	@extend %btn-green
+	display: block
+	text-align: center
+	text-transform: uppercase
+
+.dashboard-menu
+	ul
+		@extend %clear-list
+		text-transform: uppercase
+
+	a
+		display: block
+		padding: emCalc(10px) emCalc(20px)
+		border-bottom: solid 1px $color-body
+		text-decoration: none
+
+	.active a, li:hover a
+		background: $color-body
+		color: $font-color
+
+	.app-icon-placeholder
+		padding: 20px
+
+		.app-icon
+			max-width: 50px
+			+border-radius(8px)
+
+		h3
+			font-size: 1.1em
+
+		.prod-sign
+			width: 100%
+			color: #fff
+			padding: 5px
+			background: $color-blue-dark
+
+		.dev-sign
+			width: 100%
+			color: #fff
+			padding: 5px
+			background: $color-brown-dark
+
+	.user-icon-placeholder
+		padding: 20px
+
+		.user-icon
+			max-width: 50px
+			+border-radius(8px)
+
+		h3
+			font-size: 1.1em
+
+	.compose
+		margin: 10px
+		//position: absolute
+		//top: -76px
+		//right: 10px
+
+		.btn-green
+			text-align: center
+			text-transform: uppercase
+			padding: emCalc(10px)
+
+// Container content
+.container-content
+	width: emCalc(730px)
+	min-height: emCalc(550px)
+	padding: emCalc(20px) emCalc(30px) emCalc(20px) emCalc(30px)
+	float: left
+	border-left: solid 1px $color-brown-light
+
+	&.fullwidth
+		width: emCalc(940px)
+
+	h3
+		font-size: emCalc(30px)
+		font-weight: 500
+
+	.steps-placeholder
+		@extend %clearfix
+		margin: emCalc(10px) emCalc(0px) emCalc(30px) emCalc(0px)
+
+		.steps
+			width: emCalc(155px)
+			height: emCalc(50px)
+			background: $color-brown-light
+			float: left
+			display: block
+			padding: emCalc(12px)
+			margin-right: 3px
+			text-decoration: none
+
+			&.active
+				background: $color-brown-dark
+				color: #fff
+			&:hover
+				background: $color-brown-dark
+				color: #fff
+
+	.aundience-selection
+	
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+
+			
+			li
+				display: inline
+				width: 150px
+				height: 50px
+				margin: 20px 0 30px 23px
+				float: left
+				+border-radius(3px)
+				+background(linear-gradient(#fff, #f6f6f6))
+				text-align: center
+				border: solid 1px #e0e0e0
+				font-size: emCalc(20px)
+				&.active
+					+background(linear-gradient(#92c4cf, #bfd5d8))
+				a
+					padding: 10px 0 0 0px
+					width: 150px
+					height: 50px
+					display: block
+					font-size: emCalc(12px)
+					text-decoration: none
+					&:hover
+						color: #000	
+					&:before
+						margin-right: 5px
+				@each $type in p-broadcast, p-users, p-devices, p-location
+					.#{$type}
+						+icon("i-#{$type}")
+							color: #000
+							font-size: emCalc(20px)
+						
+					
+
+				
+	
+	.go-next
+		display: inline-block
+		float: right
+		padding: emCalc(10px) emCalc(40px)
+		margin-top: emCalc(20px)
+
+	.target-choice
+		list-style-type: none
+
+		li
+			display: inline
+
+	.select-box
+		margin-bottom: 20px
+
+	.config
+		fieldset
+			width: 93%
+			border: solid 1px $color-body
+			+border-radius(10px)
+			padding: emCalc(50px) emCalc(20px) emCalc(20px) emCalc(20px)
+			legend
+				padding: emCalc(10px) emCalc(0px) emCalc(0px) emCalc(20px)
+				font-size: 1.1em
+
+			.remove
+				position: absolute
+				right: 20px
+				top: 10px
+
+				a
+					font-size: 0.5em
+
+			.radio-buttons
+				list-style-type: none
+				display: inline
+				padding: 0
+
+		.right
+			float: right
+			margin-right: 40%
+
+		.left
+			float: left
+
+	.icon-box
+		.app-icon
+			+border-radius(10px)
+			max-width: 72px
+			max-height: 72px
+		
+	#message
+		float: left
+
+	#editor
+		margin-bottom: 30px
+
+	.preview
+		width: 386px
+		height: 726px
+		margin: emCalc(30px) emCalc(30px) emCalc(30px) 23%
+		+data-uri-bg('iphone_preview.png')
+		text-align: center
+
+		.content
+			position: absolute
+			width: 321px
+			height: 482px
+			margin: emCalc(123px) emCalc(0px) emCalc(0px) emCalc(32px)
+			background: #fff
+			text-align: center
+			vertical-align: middle
+			overflow: hidden
+
+			.status-bar
+				width: 321px
+				height: 20px
+				+data-uri-bg('iphone_status_bar.png')
+
+			.title-bar
+				+data-uri-bg('iphone_title_bar.png')
+				width: 321px
+				height: 45px
+
+				.actions-button
+					width: 58px
+					height: 32px
+					float: left
+					margin: emCalc(7px) emCalc(0px) emCalc(0px) emCalc(5px)
+					+data-uri-bg('iphone_actions_button.png')
+
+				.close-button
+					width: 58px
+					height: 32px
+					float: right
+					margin: emCalc(7px) emCalc(5px) emCalc(0px) emCalc(0px)
+					+data-uri-bg('iphone_close_button.png')
+
+			.map
+				height: 417px
+			
+			iframe
+				width: 321px
+				height: 417px
+				margin-top: 6px
+				border: 0
+				&.iframe-url
+					margin-top: 0px
+				
+			.img-placeholder
+				width: 321px
+				height: 417px
+				background: #000
+				
+				.carousel
+					width: emCalc(321px)
+					height: emCalc(417px)
+					padding: 0
+					position: relative
+					line-height: emCalc(417px)
+					
+					ul, li
+						@extend %clear-list
+					
+					.carousel-navi-box
+						text-align: center
+						
+					.carousel-loader
+						position: absolute
+						top: 390px
+						margin-left: -15px
+					
+						li
+							float: left
+							margin-left: emCalc(5px)
+							&:first-child
+								margin-left: 0
+					
+							a
+								+hide-text
+								@extend %circle-box
+								background: rgba(255, 255, 255, 0.6)
+								width: emCalc(5px)
+								height: emCalc(5px)
+								display: block
+					
+							&.active a, &:hover a
+								background: #fff
+					
+					.carousel-content
+						height: emCalc(417px)
+						
+						ul, li		
+							height: emCalc(417px)
+							line-height: emCalc(417px)
+							
+						ul, li, img
+							vertical-align: middle
+						img 
+							top: 0 !important
+							max-width: 321px
+							max-height: 417px
+
+
+			.alert
+				display: inline-block
+				*display: inline
+				width: 287px
+				height: auto
+				margin: 25% emCalc(0px) emCalc(0px) emCalc(0px)
+
+				.alert-top
+					width: 287px
+					height: 29px
+					margin: emCalc(7px) emCalc(5px) emCalc(0px) emCalc(0px)
+					padding: emCalc(18px) emCalc(0px) emCalc(0px) emCalc(0px)
+					+data-uri-bg('iphone_alert_top.png')
+					color: #fff
+					font-family: 'Helvetica Neue'
+					font-size: 0.9em
+					text-align: center
+					font-weight: bold
+					text-shadow: 0px 0px white, -1px -1px #000
+
+				.alert-middle
+					width: 287px
+					padding: emCalc(0px) emCalc(0px) emCalc(5px) emCalc(0px)
+					+data-uri-bg('iphone_alert_middle.png',repeat)
+					color: #fff
+					font-family: 'Helvetica Neue'
+					font-size: 0.9em
+					text-align: center
+					font-weight: bold
+					text-shadow: 0px 0px white, -1px -1px #000
+
+					.alert-message
+						color: #fff
+						font-family: 'Helvetica Neue'
+						font-size: 0.8em
+						text-align: center
+						font-weight: normal
+						text-shadow: none
+						padding: emCalc(0px) emCalc(0px) emCalc(20px) emCalc(0px)
+
+					.alert-button-big
+						width: 260px
+						height: 36px
+						padding: emCalc(8px) emCalc(0px) emCalc(0px) emCalc(0px)
+						margin: emCalc(0px) emCalc(0px) emCalc(5px) emCalc(17px)
+						+data-uri-bg('iphone_alert_button_big.png')
+						color: #fff
+						font-family: 'Helvetica Neue'
+						font-size: 0.8em
+						text-align: center
+						font-weight: bold
+						text-shadow: 0px 0px white, -1px -1px #000
+
+					.alert-button
+						position: relative
+						width: 127px
+						height: 36px
+						padding: emCalc(8px) emCalc(0px) emCalc(0px) emCalc(0px)
+						+data-uri-bg('iphone_alert_button_on.png')
+						color: #fff
+						font-family: 'Helvetica Neue'
+						font-size: 0.8em
+						text-align: center
+						font-weight: bold
+						text-shadow: 0px 0px white, -1px -1px #000
+
+						&.left
+							float: left
+							margin-left: 15px
+						&.right
+							float: right
+							margin-right: 15px
+						&.center
+							margin-left: 81px
+					.clear
+						clear: both
+
+				.alert-bottom
+					width: 287px
+					height: 23px
+					+data-uri-bg('iphone_alert_bottom.png')
+
+.stats
+	display: block
+	height: emCalc(340px)
+	float: left
+	
+	.notifications
+		width: emCalc(650px)
+		float: left
+	
+	.users
+		width: emCalc(260px)
+		height: emCalc(250px)
+		float: left
+		margin: -48px 0 0 0
+		padding: emCalc(0px) emCalc(0px) emCalc(20px) emCalc(20px)
+		
+	.clear
+		clear: both
+
+		h3
+			line-height: 0
+
+
+	img
+		@extend %fleximage
+		
+.resources
+	margin: 50px 0 20px 0
+	.dashboard-documentation
+		margin-right: 30px
+		width: 31%
+		float: left
+		ul
+			padding: 0 5px 0 0
+			list-style: none
+
+		h2
+			border-bottom: solid 1px $color-body
+	
+	.dashboard-api
+		margin-right: 30px
+		width: 31%
+		float: left
+		ul
+			padding: 0 5px 0 0
+			list-style: none
+		h2
+			border-bottom: solid 1px $color-body
+		
+	.dashboard-support
+		width: 31%
+		float: left
+		ul
+			padding: 0 5px 0 0
+			list-style: none
+		h2
+			border-bottom: solid 1px $color-body
+		
+	.clear
+		clear: both	
+
+
+
+// Please refactor pagination
+.pagination
+	float: right
+
+	a
+		+border-radius(2px)
+		width: 25px
+		height: 25px
+		display: inline-block
+		margin-left: 15px
+		text-decoration: none
+
+		&:first-child
+			margin-left: 0
+
+		&:hover
+			+opacity(0.7)
+
+	@each $action in prev, next
+		.#{$action}
+			+icon("i-#{$action}")
+
+.faq-list
+	margin: 0 0 20px 0
+	padding: 10px 0 10px 0
+	overflow: hidden
+
+	dt
+		padding: 1px 0 0 0
+		overflow: hidden
+
+		a, a:hover, a:active
+			padding: 0 24px 0 8px
+			color: #fff
+			border: 0
+			text-decoration: none
+			display: block
+			height: 40px
+			line-height: 40px
+			overflow: hidden
+			cursor: pointer
+			//font-size: 2em
+			font-weight: 100
+
+
+		a:hover
+			background: $color-blue
+
+		a:active, a:link, .active a:visited
+			background: $color-blue
+
+		.active a:hover, .active a:active
+			background: $color-blue
+
+		.single a
+			background: $color-blue !important
+			cursor: default
+
+	dd
+		height: 0
+		position: absolute
+		overflow: hidden
+		display: none
+
+		p, dl
+			padding: 4px 16px
+			//font-size: 1.5em
+			font-weight: 100
+			color: #000
+
+	.active
+		height: auto
+		position: relative
+		margin: 0
+		padding-bottom: 10px
+		display: block
+
+	dd, dl, dd
+		height: auto
+		position: relative
+
+.api
+	margin-bottom: 30px
+
+	.issues
+		width: emCalc(600px)
+		height: emCalc(200px)
+
+		.date
+			line-height: 0
+			font-weight: 200
+
+	.health
+		width: emCalc(260px)
+		height: emCalc(200px)
+		border-left: solid 1px $color-body
+		position: absolute
+		margin-top: -200px
+		left: emCalc(650px)
+		padding: emCalc(0px) emCalc(0px) emCalc(20px) emCalc(20px)
+
+		h3
+			line-height: 0
+		
+		.endpoints
+			list-style-type: none
+			margin-left: -41px
+			
+			li	
+				padding: 0px 0px 5px 30px
+				background: url('/images/status-ok.jpg') no-repeat 0px 5px transparent
+			
+
+.lists-delete
+
+	.app-icon
+		+border-radius(8px)
+
+	.small
+		font-size: 0.8em
+
+	.platforms
+		margin-right: -5px
+		margin-top: -30px
+		float: right
+		span
+			@extend %icon-bg
+			margin-right: 5px
+			line-height: 2.8em
+
+		@each $platform in WP8, Websockets, BlackBerry, iOS, Android
+			.#{$platform}
+				+icon("i-#{$platform}")
+					color: $color-brown
+					font-size: emCalc(30px)
+
+.plans
+	@extend %clear-list
+
+	.plan-name
+		font-size: emCalc(20px)
+
+	li
+		width: 22%
+		float: left
+		position: relative
+		text-align: center
+		margin-left: 3%
+		padding: emCalc(10px) 0
+		background: $color-brown-light
+		&:first-child
+			margin-left: 0
+
+	input[type="radio"]
+		text-align: center
+
+.drop-area
+	width: 698px
+	height: 50px
+	text-align: center
+	border: 2px dashed #ddd
+	padding: 10px
+	margin-top: 20px
+	
+	&.over
+		background: $color-brown-light
+		border: 2px dashed #000
+	
+	.drop-instructions
+		display: block
+		height: 30px
+		font-size: 1.2em
+		
+.file-list
+	width: 100%
+	list-style: none
+	margin: 20px 0px 20px -42px
+	
+	li
+		float: left
+		width: 100px
+		margin: 2px 15px 15px 2px
+		border: 2px solid #ddd
+		+border-radius(10px)
+		height: 100px
+		line-height: 100px
+		text-align: center
+		
+		img
+			vertical-align: middle
+			max-width: 98px
+			max-height: 98px
+			
+		a.delete-file:link, a.delete-file:hover, a.delete-file:visited, a.delete-file:active 
+			display: block
+			position: absolute
+			width: 20px
+			height: 12px
+			margin: 2px 0px 0px 78px
+			padding-top: 8px
+			+border-radius(10px)
+			background: $color-brown
+			line-height: 0
+			text-decoration: none
+			color: #fff
+			font-weight: 200
+.users-list
+	text-align: center
+	
+	.avatar
+		max-width: 100px
+		+border-radius(5px)
+	
+	.btn
+		@extend %btn-green
+		
+	.devices
+		list-style: none
+		margin: 0
+		
+		li
+			display: inline
+			margin-right: 15px
+			text-align: center
+
+			@each $platform in WP8, Websockets, BlackBerry, iOS, Android, Web, Windows, Mac
+				.#{$platform}
+					+icon("i-#{$platform}")
+						color: $color-brown
+						font-size: emCalc(35px)
+						+hide-text
+							
+			.device-phone
+				display: inline-block
+				text-align: center
+				width: 38px
+				height: 69px
+				background: url('/images/iphone.png') no-repeat 0 0 transparent
+
+				.bubble
+					position: absolute
+					width: 20px
+					height: 20px
+					+border-radius(20px)
+					background: #fff
+					font-size: 0.7em
+					line-height: 1.8em
+					padding: 0
+				
+					&.app-version
+						width: 30px
+						float: right
+						margin:  0px 0 0 14px
+						
+					&.language
+						margin:  0px 0 0 -8px
+
+				.os-version
+					position: absolute
+					width: 38px
+					font-size: 0.5em
+					margin: 30px 0 0 0px
+					
+				.device-string
+					position: absolute
+					font-size: 0.7em
+					width: 41px
+					font-size: 0.5em
+					font-weight: bold
+					margin: 70px 0 0 0px
+					line-height: 10px
+					white-space: nowrap
+					overflow: hidden
+					text-overflow: ellipsis
+					
+				.platform
+					width: 38px
+					position: absolute
+					font-size: 0.6em
+					font-weight: bold
+					margin: 18px 0 0 0px
+					
+			.device-tablet
+				display: inline-block
+				text-align: center
+				width: 53px
+				height: 69px
+				background: url('/images/ipad.png') no-repeat 0 0 transparent
+				.bubble
+					position: absolute
+					width: 20px
+					height: 20px
+					+border-radius(20px)
+					background: #fff
+					font-size: 0.7em
+					line-height: 1.8em
+					padding: 0
+				
+					&.app-version
+						width: 30px
+						float: right
+						margin:  0px 0 0 30px
+						
+					&.language
+						margin:  0px 0 0 -8px
+
+				.os-version
+					position: absolute
+					width: 53px
+					font-size: 0.5em
+					margin: 30px 0 0 0px
+					
+				.device-string
+					position: absolute
+					font-size: 0.7em
+					width: 55px
+					font-size: 0.5em
+					font-weight: bold
+					margin: 70px 0 0 0px
+					line-height: 10px
+					white-space: nowrap
+					overflow: hidden
+					text-overflow: ellipsis
+					
+				.platform
+					width: 53px
+					position: absolute
+					font-size: 0.6em
+					font-weight: bold
+					margin: 18px 0 0 0px
+
+
+			.device-desktop
+				display: inline-block
+				text-align: center
+				width: 85px
+				height: 69px
+				background: url('/images/desktop.png') no-repeat 0 0 transparent
+				.bubble
+					position: absolute
+					width: 20px
+					height: 20px
+					+border-radius(20px)
+					background: #fff
+					font-size: 0.7em
+					line-height: 1.8em
+					padding: 0
+				
+					&.app-version
+						width: 30px
+						float: right
+						margin:  0px 0 0 60px
+						
+					&.language
+						margin:  0px 0 0 -8px
+
+				.os-version
+					position: absolute
+					width: 85px
+					font-size: 0.5em
+					margin: 20px 0 0 0px
+					
+				.device-string
+					position: absolute
+					font-size: 0.7em
+					width: 85px
+					font-size: 0.5em
+					font-weight: bold
+					margin: 70px 0 0 0px
+					line-height: 10px
+					white-space: nowrap
+					overflow: hidden
+					text-overflow: ellipsis
+					
+				.platform
+					width: 85px
+					position: absolute
+					font-size: 0.6em
+					font-weight: bold
+					margin: 8px 0 0 0px	
+					
+.clear
+	clear: left
+	
+.notification-info	
+	padding: 10px
+	min-height: 350px		
+
+	td[colspan="3"]
+		margin: 0
+		padding: 0
+		border-right: 2px solid #fff
+		
+	.preview-message
+		position: absolute
+		width: 186px
+		height: 350px
+		+data-uri-bg('device-preview.png')
+		
+		.device-content
+			background: #fff
+			width: 154px
+			height: 230px
+			margin: 60px 20px 20px 16px
+			overflow: hidden
+				
+			.iframe
+				width: 154px
+				height: 230px
+				border: none
+				overflow: hidden
+												
+			.content
+				display: table-cell
+				height: 230px
+				vertical-align: middle
+				
+
+				
+				.images
+					position: absolute
+					text-align: center
+					vertical-align: middle
+					display: inline-block
+					z-index: 1
+					top: 0
+					
+					img
+						max-width: 154px
+						max-height: 230px
+					
+				.alert-message	
+					text-align: center
+					vertical-align: middle
+					display: inline-block
+					width: 100px
+					background: $color-blue
+					color: #fff
+					font-size: 0.6em
+					padding: 10px
+					margin-left: 16px
+					+border-radius(5px)	
+					line-height: 1em
+					z-index: 2
+					
+					h3 
+						font-size: 0.8em
+						
+					ul
+						margin: 0
+						padding: 0
+						
+						li
+							margin: 0 0 2px 0
+							list-style: none
+							background: $color-blue-dark
+							color: #fff
+							padding: 3px
+							+border-radius(2px)
+		
+	.insights
+		position: relative
+		width: 470px
+		margin: 0px 0 0 210px	
+		
+		.chart
+			position: absolute
+			margin: 0px 0 0 250px
+			
+		.average-response
+			width: 174px
+			height: 170px
+			padding: 30px 0 0 20px
+			text-align: center
+			font-size: 1.7em
+			
+			h3
+				font-size: 0.9em
+				margin: 0
+				
+			.time
+				display: block
+				margin: 15px 0 5px 0 
+				font-size: 2em
+				color: $color-brown-dark
+				
+			.time-unit
+				display: block
+				font-size: 0.5em
+				color: $color-brown-dark				
+				
+			
+			
+		.replies
+			margin: 0
+			padding: 10px
+				
+			.thumb
+				width: 45px
+			td			
+				padding: 3px	
+				font-size: 0.7em
+				background: #fff
+				border: 1px solid $color-brown-light
+				img.media
+					max-width: 40px
+					+border-radius(4px)
+			h3
+				margin: 0
+				font-size: 1.2em
+				
+.charts
+	width: 100%
+	
+	&.failed
+		background: $color-brown-light
+		font-size: 1.2em
+		color: $color-brown
+		text-align: center
+		line-height: 250px
+			
+.loader
+	top: 200px
+	left: 55%
+	position: absolute
+	background-color: rgba(0,0,0,0)
+	border: 5px solid rgba(145,194,207,1.0)
+	opacity: 0.6
+	border-top: 5px solid rgba(0,0,0,0)
+	border-left: 5px solid rgba(0,0,0,0)
+	border-radius: 50px
+	box-shadow: 0 0 10px #7e7e7e
+	width: 50px
+	height: 50px
+	margin: 0 auto
+	-moz-animation: spin 0.8s infinite linear
+	-webkit-animation: spin 0.8s infinite linear
+	
+.search-loader
+	margin: 30px auto 30px auto
+	left: 55%
+	background-color: rgba(0,0,0,0)
+	border: 5px solid rgba(145,194,207,1.0)
+	opacity: 0.6
+	border-top: 5px solid rgba(0,0,0,0)
+	border-left: 5px solid rgba(0,0,0,0)
+	border-radius: 50px
+	box-shadow: 0 0 10px #7e7e7e
+	width: 50px
+	height: 50px
+	-moz-animation: spin 0.8s infinite linear
+	-webkit-animation: spin 0.8s infinite linear
+	
+.map-loader
+	top: 45%
+	left: 45%
+	position: absolute
+	background-color: rgba(0,0,0,0)
+	border: 5px solid rgba(23,77,48,1.0)
+	opacity: 0.6
+	border-top: 5px solid rgba(0,0,0,0)
+	border-left: 5px solid rgba(0,0,0,0)
+	border-radius: 50px
+	box-shadow: 0 0 10px #7e7e7e
+	width: 50px
+	height: 50px
+	margin: 0 auto
+	-moz-animation: spin 0.8s infinite linear
+	-webkit-animation: spin 0.8s infinite linear
+
+@-moz-keyframes spin
+	0%
+		-moz-transform: rotate(0deg)
+	100%
+		-moz-transform: rotate(360deg)
+
+@-moz-keyframes spinoff
+	0%
+		-moz-transform: rotate(0deg)
+	100%
+		-moz-transform: rotate(-360deg)
+
+@-webkit-keyframes spin
+	0%
+		-webkit-transform: rotate(0deg)
+	100%
+		-webkit-transform: rotate(360deg)
+
+@-webkit-keyframes spinoff
+	0%
+		-webkit-transform: rotate(0deg)
+	100%
+		-webkit-transform: rotate(-360deg)
+		
+.device-user
+	margin: 14px 0 0 0
+	float: left
+	
+	.avatar
+		max-width: 100px
+		+border-radius(5px)
+		
+			
+@each $platform in WP8, Websockets, BlackBerry, iOS, Android, Web, Windows
+	.#{$platform}
+		+icon("i-#{$platform}")
+			color: $color-brown
+			font-size: emCalc(35px)
+			+hide-text	
+.device-phone
+	margin-right: 40px
+	float: right
+	display: inline-block
+	text-align: center
+	width: 38px
+	height: 69px
+	background: url('/images/iphone.png') no-repeat 0 0 transparent
+
+	.bubble
+		position: absolute
+		width: 20px
+		height: 20px
+		+border-radius(20px)
+		background: #fff
+		font-size: 0.7em
+		line-height: 1.8em
+		padding: 0
+	
+		&.app-version
+			width: 30px
+			float: right
+			margin:  0px 0 0 14px
+			
+		&.language
+			margin:  0px 0 0 -8px
+
+	.os-version
+		position: absolute
+		width: 38px
+		font-size: 0.5em
+		margin: 30px 0 0 0px
+		
+	.device-string
+		position: absolute
+		font-size: 0.7em
+		width: 41px
+		font-size: 0.5em
+		font-weight: bold
+		margin: 70px 0 0 0px
+		line-height: 10px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		
+	.platform
+		width: 38px
+		position: absolute
+		font-size: 0.6em
+		font-weight: bold
+		margin: 18px 0 0 0px
+		

@@ -1,0 +1,104 @@
+header
+	.wrap
+		position: relative
+	h1 a
+		+handWritingBold
+		+retina-image("logo-newhome", 108px , 77px, no-repeat)
+		display: inline-block
+		margin-top: emCalc(10px, 56px)
+		padding: emCalc(73px, 56px) emCalc(10px, 56px) emCalc(10px, 56px) emCalc(110px, 56px)
+		font-size: emCalc(44px, 36px) // H1 is 36px by default
+		font-weight: 100
+		color: $font-color
+	.menu
+		position: absolute
+		right: 0
+		top: 30px
+		li
+			float: left
+			margin-left: emCalc(5px)
+			@extend %clear-list
+		a
+			+border-radius($default-radius)
+			display: block
+			line-height: 1
+			font-weight: 200
+			padding: emCalc(8px) emCalc(20px)
+			color: $font-color
+			text-decoration: none
+			&:hover, &.active
+				color: #fff
+				background: $color-blue !important
+		.submenu
+			margin-left: 6px
+			float: left
+			border-left: solid 1px $font-color
+			padding: 0
+			li
+				position: relative
+				margin-left: 10px
+				&.active
+					.popup
+						display: block
+					a
+						color: #fff
+						background: $color-blue
+						+border-radius(4px 4px 0 0)
+			.btn
+				color: #fff
+
+.popup
+	width: 500px
+	right: 0
+	position: absolute
+	padding: 20px
+	background: $color-blue
+	z-index: 20
+	display: block
+	.field
+		width: 47.5%
+		float: left
+		margin-left: 20px
+		&:first-child
+			margin-left: 0
+	label
+		margin-bottom: 10px
+		color: #fff
+	input[type="text"], input[type="password"]
+		width: 98%
+		padding: 8px 2%
+	input[type="submit"]
+		@extend %btn-brown
+		font-size: emCalc(20px)
+		float: right
+		margin-top: emCalc(25px, 20px)
+		padding: emCalc(10px, 20px) emCalc(25px, 20px)
+
+.introduction
+	margin-bottom: 0
+	padding-top: emCalc(50px)
+	min-height: emCalc(480px)
+	background: $color-blue
+	color: #fff
+	h1
+		font-size: emCalc(60px)
+		line-height: emCalc(70px, 60px)
+	p
+		font-size: emCalc(24px)
+		line-height: emCalc(36px, 24px)
+	h1, p
+		margin-bottom: 25px
+	.text
+		width: 46% // 460px
+		line-height: 2em
+	.action
+		@extend %btn-darkblue
+		+border-radius($default-radius)
+		padding: emCalc(13px, 24px) emCalc(40px, 24px)
+		margin-bottom: emCalc(15px, 24px)
+		font-size: emCalc(24px)
+		text-align: center
+		&:hover
+			background: $font-color
+	a
+		color: $font-color

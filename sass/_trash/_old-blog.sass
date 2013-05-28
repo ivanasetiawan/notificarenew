@@ -1,0 +1,99 @@
+// Blogs
+section.blogs, section.blog-post
+	article
+		height: 425px
+		position: relative
+		margin-bottom: 30px
+		padding: 20px 20px 20px 68%
+		background: #fff
+
+	h3
+		margin-top: 0
+		//font-size: 4.4em
+		font-family: $font-family
+		font-weight: 200
+		text-align: left
+		line-height: 1.1364em
+
+		a
+			color: $font-color
+
+	.article-img, .author-info
+		position: absolute
+		top: 20px
+
+	.article-img
+		width: 64%
+		height: 425px
+		left: 20px
+		overflow: hidden
+		border: solid 3px #b5aaa1
+
+		img
+			@extend %fleximage
+
+	.author-info
+		top: 8px
+		left: 40px
+		padding: 5px 20px
+		text-align: center
+		z-index: 2
+		background: #e1dad4
+
+		p
+			//font-size: 1.4em
+
+		.name
+			//font-size: 1.8em
+
+		.tag
+			width: 12px
+			height: 14px
+			top: -1px
+			left: -12px
+			display: inline-block
+			position: absolute
+			+data-uri-bg("tag-left.png", no-repeat)
+
+			&.right
+				left: auto
+				right: -12px
+				+data-uri-bg("tag-right.png", no-repeat)
+
+	.author-img
+		width: 80px
+		height: 80px
+		border-color: #ad9b87
+
+	.article-text
+		height: 245px
+		overflow: hidden
+
+		p
+			margin-bottom: 20px
+
+		a
+			color: $color-green
+			border-bottom: dashed 1px $color-green
+
+			&:hover
+				color: $font-color
+				border-bottom-color: $font-color
+
+	.btn
+		right: 20px
+		bottom: 20px
+		position: absolute
+		//font-size: 1.5em
+
+section.blog-post
+	article
+		height: auto
+		padding: 430px 20px 20px
+
+	.article-img
+		width: 95.5%
+		height: 398px
+
+	.article-text
+		height: auto

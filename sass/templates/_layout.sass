@@ -1,0 +1,70 @@
+// Basic
+%spacing-block, %block-2, %block-1
+	padding: emCalc(15px) emCalc(20px)
+	margin-bottom: emCalc(20px)
+	float: left
+	background: #fff
+	h2
+		padding-bottom: emCalc(10px, 30px)
+		margin-bottom: emCalc(10px, 30px)
+		border-bottom: solid 1px $color-brown-light
+
+%block-2
+	width: emCalc(620px)
+
+%block-1
+	width: emCalc(280px)
+	margin-left: emCalc(20px)
+
+// Generic layout
+.main-content
+	@extend %clearfix
+
+.sidebar
+	@extend %block-1
+	padding-bottom: 0
+
+	p
+		margin-top: 0
+
+.content-wrapper
+	@extend %block-2
+
+.bg-full
+	background: #fff
+
+// HOME
+.heading
+	background: #f1ebe6
+
+.features-box
+	background: url("../images/bg_features.png") $color-blue bottom center no-repeat
+
+.updates
+	@extend %clearfix
+	padding: emCalc(40px) 0
+
+	h2
+		+ellipsis
+
+	p
+		font-size: emCalc(18px)
+
+	> div
+		width: 47%
+		float: right
+
+		&:first-child
+			float: left
+
+// Intro page
+.intro-page
+	> h2
+		margin-bottom: emCalc(10px, 60px)
+		font-size: emCalc(60px, 16px)
+
+	.text
+		//width: 66%
+		float: left
+		font-size: emCalc(20px)
+		line-height: emCalc(36px, 20px)

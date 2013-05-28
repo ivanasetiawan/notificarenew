@@ -1,0 +1,697 @@
+// Content styling
+.main-content,
+.about-apps
+	width: 100%
+	position: relative
+	float: left
+	margin-bottom: 50px
+
+	&.alt
+		background: #fff
+
+	p
+		//font-size: 1.6em
+
+	h3
+		@extend .header3
+
+	.appstore
+		display: inline-block
+
+	.download-image
+		width: 276px
+		position: absolute
+		left: 20px
+
+		img
+			@extend %fleximage
+
+.two-columns
+	width: 100%
+	position: relative
+	float: left
+	margin-bottom: 10px
+
+	&.alt
+		background: #fff
+
+	p
+		//font-size: 1.7em
+
+	h3
+		//font-size: 3em
+		font-family: $font-family
+		font-weight: 100
+		margin-bottom: 30px
+
+	.appstore
+		display: inline-block
+		top: 340px
+
+	.download-image
+		width: 276px
+		position: absolute
+		left: 30px
+		top: 290px
+
+		img
+			@extend %fleximage
+
+.block
+	width: 44%
+	height: 465px
+	position: relative
+	margin-left: 2%
+	padding-left: 3%
+	float: left
+	text-align: left
+	background: #fff
+
+
+	&:first-child
+		margin-left: 0
+		margin-bottom: 40px
+
+	p
+		margin-bottom: 20px
+		font-weight: 200
+		color: $font-color
+
+	.author-img
+		margin-bottom: 20px
+
+.download-app
+	border-left: 1px solid #ECECEA
+
+	ul
+		position: absolute
+		left: 325px
+		top: 143px
+
+	li
+		float: none
+		margin: 10px 0 0 0
+
+
+
+// Centered form
+.centered-form
+	padding: 20px
+
+// Service central image
+.services-image
+	width: 91.8367%
+	margin: 0 auto
+
+	img
+		@extend %fleximage
+
+// Intro layout on services and about us
+section.intro, section.blogs
+	h2
+		margin-bottom: 25px
+		//font-size: 6em
+		font-weight: 200
+		line-height: 1
+
+section.intro
+	.text
+		width: 86%
+		float: left
+		//font-size: 2em
+		font-weight: 200
+		line-height: 1.8em
+
+
+	.btn
+		right: 0
+		bottom: 40px
+		position: absolute
+		//font-size: 1.2em
+		padding: 10px 25px
+
+.page-blocks-one
+	margin: 53px 0px 0px 0px
+
+	h3
+		font-family: $font-family
+		//font-size: 3.5em
+		font-weight: 200
+		text-align: center
+		margin: 20px 0px 60px 0px
+
+	.big-block
+		height: 245px
+		background: #fff
+		padding: 20px
+		width: 621px
+		margin-top: -38px
+
+		h4
+			//font-size: 1.9em
+			font-weight: 300
+
+		p
+			border-top: 1px solid #F6F3F0
+			margin-top: 10px
+
+	.small-block
+		position: absolute
+		float: left
+		height: 245px
+		background: #fff
+		padding: 20px
+		margin: -285px 0 0 676px
+		width: 283px
+
+		h4
+			//font-size: 1.9em
+			font-weight: 300
+		p
+			border-top: 1px solid #F6F3F0
+			margin-top: 10px
+
+.page-blocks-two
+	margin: 53px 0px 0px 0px
+
+	h3
+		font-family: $font-family
+		//font-size: 3.5em
+		font-weight: 200
+		text-align: center
+		margin: 20px 0px 60px 0px
+
+	.big-block
+		height: 245px
+		background: #fff
+		padding: 20px
+		width: 621px
+		margin-top: -38px
+
+		h4
+			//font-size: 1.9em
+			font-weight: 300
+
+		p
+			border-top: 1px solid #F6F3F0
+			margin-top: 10px
+
+	.small-block
+		position: absolute
+		float: left
+		height: 245px
+		background: #fff
+		padding: 20px
+		margin: -285px 0 0 676px
+		width: 283px
+
+		h4
+			//font-size: 1.9em
+			font-weight: 300
+		p
+			border-top: 1px solid #F6F3F0
+			margin-top: 10px
+
+.plans-block
+	h3
+		font-family: $font-family
+		//font-size: 3.5em
+		font-weight: 200
+		text-align: center
+		margin: 20px 0px 60px 0px
+
+	.free-plan
+		height: 245px
+		background: #fff
+		padding: 20px
+		width: 621px
+		margin-top: -38px
+
+		h4
+			//font-size: 1.9em
+			font-weight: 300
+
+		p
+			border-top: 1px solid #F6F3F0
+			margin-top: 10px
+
+		.order-plan
+			width: 620px
+			text-align: right
+
+			.btn
+				position: relative
+				top: 150px
+				padding: 8px
+				//font-size: 2em
+				font-weight: 100
+
+	.payment-info
+		position: absolute
+		float: left
+		height: 245px
+		background: #fff
+		padding: 20px
+		margin: -285px 0 0 676px
+		width: 283px
+
+		h4
+			//font-size: 1.9em
+			font-weight: 300
+
+.plans-lists
+	margin: 0 0 40px -15px
+	overflow: hidden
+
+	li
+		width: 31.8%
+		height: 680px
+		position: relative
+		float: left
+		margin: 0 0 15px 15px
+		background: #F6F3F0
+		overflow: hidden
+
+		&.inactive
+			+opacity(0.5)
+
+
+
+	h4
+		//font-size: 1.9em
+		font-weight: 300
+
+	article
+		height: 245px
+		background: #fff
+		padding: 20px
+		border-bottom: 1px solid #F6F3F0
+
+
+		.plan-price
+			border-top: 1px solid #F6F3F0
+			text-align: center
+			margin-top: 15px
+			padding-top: 15px
+			height: 100px
+
+			p
+				margin-top: 30px
+
+			.price
+				//font-size: 8em
+				font-weight: 300
+				color: #AD9B87
+
+			.currency
+				position: absolute
+				margin: -20px 0 0 -10px
+				//font-size: 1.9em
+				font-weight: 300
+				color: #AD9B87
+
+			.month
+				//font-size: 1.9em
+				font-weight: 300
+				color: #AD9B87
+
+		.plan-description
+			//font-size: 1.2em
+			font-weight: 200
+			color: #000
+
+		.plan-info
+			position: absolute
+			top: 305px
+
+			.features
+				position: absolute
+				ul
+					li
+
+						display: inline
+						float: float
+						background: #AD9B87
+						height: 25px
+						//font-size: 1.2em
+						font-weight: 200
+						color: #5C4F3F
+						margin: 3px
+						padding: 5px
+
+			p
+				//font-size: 1.5em
+				font-weight: 400
+				color: #AD9B87
+
+				span
+					color: #5C4F3F
+
+			.order-plan
+				width: 282px
+				text-align: center
+
+				.btn
+					position: absolute
+					top: 320px
+					padding: 8px
+					//font-size: 2em
+					font-weight: 100
+
+.your-order
+	height: 245px
+	padding: 20px
+
+	header
+		.h4
+			//font-size: 2em
+			font-weight: 300
+
+	.plan-price
+		border-top: 1px solid #F6F3F0
+		text-align: center
+		margin-top: 15px
+		padding-top: 15px
+		height: 100px
+
+		p
+			margin-top: 30px
+
+		.price
+			//font-size: 8em
+			font-weight: 300
+			color: #AD9B87
+
+		.currency
+			position: absolute
+			margin: -20px 0 0 -10px
+			//font-size: 1.9em
+			font-weight: 300
+			color: #AD9B87
+
+		.month
+			//font-size: 1.9em
+			font-weight: 300
+			color: #AD9B87
+
+	.plan-description
+		//font-size: 1.2em
+		font-weight: 200
+		color: #000
+
+	.plan-info
+		position: absolute
+		top: 305px
+
+		.features
+			position: absolute
+			ul
+				li
+
+					display: inline
+					float: float
+					background: #AD9B87
+					height: 25px
+					//font-size: 1.2em
+					font-weight: 200
+					color: #5C4F3F
+					margin: 3px
+					padding: 5px
+
+		p
+			//font-size: 1.5em
+			font-weight: 400
+			color: #AD9B87
+
+			span
+				color: #5C4F3F
+
+	header p
+		font-style: normal
+
+	p
+		margin-bottom: 10px
+		//font-size: 1.4em
+		font-style: italic
+
+
+.services-block
+	h3
+		font-family: $font-family
+		//font-size: 4.8em
+		font-weight: 200
+		line-height: 1
+		text-align: left
+		margin-bottom: 20px
+
+.service-lists
+	margin: 0 0 40px -15px
+	overflow: hidden
+
+	li
+		width: 31.8%
+		position: relative
+		padding-top: 160px
+		float: left
+		margin: 0 0 15px 15px
+		background: #e1dad4
+		+border-radius($default-radius)
+		overflow: hidden
+
+		&.inactive
+			+opacity(0.5)
+
+	.image-holder
+		width: 100%
+		height: 115px
+		position: absolute
+		top: 0
+		left: 0
+		padding-top: 45px
+		text-align: center
+		background: #fff
+		+border-radius(4px 4px 0 0)
+
+		img
+			display: inline-block
+
+	article
+		padding: 10px 20px 15px
+
+	header p
+		font-style: normal
+
+	h4
+		//font-size: 1.6em
+		font-weight: 700
+
+	p
+		margin-bottom: 10px
+		//font-size: 1.4em
+		font-style: italic
+
+.download-info
+	min-height: 37px
+	position: relative
+
+	p
+		margin-bottom: 0
+		font-style: normal
+
+	.btn
+		bottom: 0
+		right: 0
+		position: absolute
+		//font-size: 1.4em
+
+.service-desc
+	height: 75px
+	overflow: hidden
+	margin-bottom: 20px
+
+.awesome-people
+	float: left
+	width: 100%
+	margin-bottom: 50px
+	margin-left: -30px
+
+	li
+		width: 22%
+		float: left
+		margin: 0 0 30px 30px
+
+		&.extra-mg
+			margin-left: 280px
+
+	h4
+		text-align: center
+		//font-size: 3.5em
+		line-height: 1
+		+handWritingBold
+
+	p
+		text-align: center
+
+.awesome-person
+	width: 100%
+	height: 220px
+	margin: 0 0 15px -10px
+
+	img
+		z-index: -1
+		@extend %fleximage
+
+.user
+	width: 600px
+	height: 50px
+	top: 0
+	right: 0
+	position: absolute
+	//font-size: 1.6em
+	font-weight: 200
+	background: $color-brown
+
+	.avatar
+		width: 50px
+		height: 50px
+		border: 0
+
+	.user-options
+		position: absolute
+		margin: -40px 0 0 55px
+
+		.user-menu li
+			padding: 0 5px 0 5px
+			display: block
+			height: 50px
+			float: left
+			vertical-align: middle
+			list-style: none
+			margin: 0 0 0 5px
+
+			a
+				color: $font-color
+				text-decoration: underline
+
+				&:hover
+					text-decoration: none
+			a.adminlink
+				position: absolute
+				margin: -7px 0 0 0
+
+	.app-switch
+		position: absolute
+		top: 0px
+		right: 0px
+		width: 50px
+
+		.app-icon
+			max-width: 50px
+			max-height: 50px
+			+border-radius(8px)
+
+#mainfooter
+	height: 160px
+	clear: both
+	background: $color-body
+
+	.wrap
+		position: relative
+		padding: 0px
+		overflow: hidden
+
+	nav
+		top: 70px
+		right: 0
+
+section.applications
+
+	td a
+		padding: 3px 10px
+		//font-size: 0.7778em
+
+// Layout with 2 columns
+.twocols
+	margin-bottom: 30px
+	overflow: hidden
+
+	.main-col, .chart
+		width: 66.6667%
+		float: left
+
+	.chart
+		float: right
+
+		img
+			@extend %fleximage
+
+	.secondary-col,
+	.intro-statistic
+		width: 31.25%
+
+	.secondary-col
+		float: right
+
+		> div
+			padding: 20px
+
+.content
+	h2
+		margin-bottom: 20px
+		//font-size: 2.4em
+
+	p
+		//font-size: 1.8em
+		line-height: 1.375em
+
+	form
+		display: block
+		margin-top: 30px
+		text-align: center
+
+		a, input
+			display: inline-block
+			font-family: $font-family
+			//font-size: 2.4em
+		a
+			margin-right: 30px
+
+		input[type="submit"]
+			position: absolute
+			top: 370px
+			left: 495px
+
+	.loading
+		font-family: $font-family
+		//font-size: 2em
+		color: $color-green
+
+
+	.balloon
+		width: 588px
+		height: 360px
+		+data-uri-bg("balloon.png", no-repeat)
+		text-align: center
+
+		textarea
+			width: 500px
+			height: 260px
+			margin: 20px 20px 0 0
+			font-family: $font-family
+			//font-size: 2em
+			background: transparent
+			border: none
+
+section.users
+	margin-bottom: 30px
+
+.copyright
+	margin: 80px 0 0 20px
+	//font-size: 1.1em
+
+	.love
+		width: 11px
+		height: 10px
+		margin: 0 3px
+		display: inline-block
+		+data-uri-bg("i-love.png")

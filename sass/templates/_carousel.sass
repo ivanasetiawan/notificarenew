@@ -1,0 +1,54 @@
+// Carousel
+.carousel
+	height: emCalc(620px)
+	padding: emCalc(40px) 0
+	position: relative
+
+	ul, li
+		@extend %clear-list
+
+.carousel-navi-box
+	text-align: center
+
+.carousel-loader
+	display: inline-block
+
+	li
+		float: left
+		margin-left: emCalc(5px)
+		&:first-child
+			margin-left: 0
+
+		a
+			+hide-text
+			@extend %circle-box
+			background: rgba(255, 255, 255, 0.6)
+			width: emCalc(20px)
+			height: emCalc(20px)
+			display: block
+
+		&.active a, &:hover a
+			background: #fff
+
+.carousel-content
+	height: emCalc(590px)
+
+	li
+		display: none
+		+transition(all, 0.5s)
+		&.active
+			display: block
+
+	h2
+		padding: 0 emCalc(100px, 36px)
+		font-size: emCalc(36px, 16px)
+		text-align: center
+
+	h2, img
+		position: absolute
+		color: #fff
+
+	img
+		top: emCalc(150px)
+		left: 0
+		border: 0

@@ -1,0 +1,180 @@
+// Media
+@media screen and (max-width: 1000px)
+	.wrap, #mainfooter .wrap
+		padding: 0 emCalc(20px)
+
+	#mainheader
+		text-align: center
+
+		.menu
+			position: relative
+			display: inline-block
+			li
+				margin-bottom: emCalc(10px)
+			a
+				padding: emCalc(8px)
+
+	.introduction
+		min-height: auto
+		padding-bottom: emCalc(30px)
+		.text
+			width: 100%
+
+	.intro-media
+		display: none
+
+	.features-box
+		background-position: center center
+
+	.carousel, .carousel-content
+		display: none
+
+	.updates > div
+		width: 100%
+		margin-bottom: emCalc(30px)
+		padding: emCalc(30px) 0 0
+		border-left: 0
+		border-top: solid 1px $color-brown-light
+		&:first-child
+			border: 0
+
+	.press-box img
+		width: 100%
+
+	#mainfooter
+		height: auto
+		text-align: center
+
+		margin: 0
+		.get-support
+			margin-bottom: emCalc(30px)
+		.socnet
+			display: inline-block
+			float: none
+			margin: 0 auto emCalc(30px)!important
+
+	.about-notificare
+		float: none
+		> div
+			width: 100%
+			float: none
+			margin-bottom: emCalc(30px)
+			text-align: center
+
+	.menu-footer
+		width: 100%
+		float: none
+		padding: 0
+		border: 0
+
+		.navi, .users
+			display: none
+
+		.get-support
+			width: 100%
+			float: none
+			text-align: center
+
+	%fullblock
+		width: 94%
+		padding: emCalc(15px) 3%
+
+	.free-plan, .testimonials, .content-wrapper, .sidebar
+		@extend %fullblock
+		margin-left: 0
+		.author-img
+			display: none
+
+	.sidebar
+		overflow: hidden
+	.your-order
+		margin-bottom: -20px
+
+	.plans-lists li
+		width: 40%
+		float: none
+		margin: 0 auto emCalc(20px) !important
+
+	.plan-details
+		width: 100%
+
+	.payment-info, .support
+		display: none
+
+	section.blogs, section.blog-post
+		article, .article-text
+			height: auto
+		article
+			padding: emCalc(20px)
+		h3
+			margin: emCalc(20px) 0 0
+
+		.article-img
+			display: none
+
+		.author-info, .readmore
+			position: static
+
+	section.features
+		padding: emCalc(40px) emCalc(20px)
+
+	form legend
+		font-size: emCalc(18px)
+
+	// Dashboard
+	.dashboard-navi
+		position: static
+		margin: 0 auto
+
+	.container-content
+		width: 92%
+
+	.container-side
+		width: 100%
+
+		ul
+			top: emCalc(-48px)
+			right: 0
+			position: absolute
+
+		li
+			float: left
+			&.active a,
+			&:hover a
+				background: #fff
+
+	.dashboard-menu a
+		border: 0
+
+	// Contact page
+	.contactus
+		width: 96%
+		background: $color-brown
+		color: #fff
+		padding: 2%
+		float: none
+		clear: left
+
+	.aboutus
+		width: 100%
+
+@media screen and (max-width: 600px)
+	#mainheader .menu
+		li
+			float: none
+		.submenu
+			border: 0
+
+	.features-box, .download-image, .press-box, .img-feature, .quicklink, .facebook-box, .map-image
+		display: none
+
+	.download-app .appstore, .updates
+		margin-top: emCalc(30px)
+
+	.plans-lists li
+		width: 80%
+		float: none
+		margin: 0 auto emCalc(20px) !important
+
+	.plan-details
+		width: 100%

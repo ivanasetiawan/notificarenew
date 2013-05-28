@@ -1,0 +1,594 @@
+// Generic form styling
+form
+	fieldset
+		position: relative
+		border: 0
+		padding: emCalc(50px) 0 emCalc(30px) 0
+
+	legend
+		top: 0
+		left: 0
+		position: absolute
+		font-size: emCalc(30px)
+		font-weight: 500
+
+	label
+		display: block
+		font-weight: 400
+
+
+	.user-select-field
+	
+		.user-list
+			width: 98%
+			+border-radius(3px)
+			+background(linear-gradient(#f6f6f6, #fff))
+			margin-bottom: 10px
+			padding: 0px 3px 3px 5px
+			font-family: $font-family
+			font-size: 1em
+			border: solid 1px #e0e0e0
+			&:focus
+				border-color: $color-brown
+			&.error
+				border-color: $color-red
+			
+			ul
+				list-style: none
+				margin: 0
+				padding: 0
+			
+				input[type="text"]
+					margin: 0
+					border: none
+					width: 150px
+					background: none
+					padding: 0
+				
+				li
+					display: inline-table
+					padding: 3px 0 0 0
+					
+					span
+						padding: 5px 25px 5px 8px
+						background: $color-brown-light
+						+border-radius(3px)
+						margin-right: 3px
+						
+						img
+							max-width: 25px
+							margin: 0 5px 0 5px
+							float: left
+							+border-radius(3px)
+						
+					.delete-recipient 
+						width: 17px
+						height: 11px
+						position: absolute
+						padding: 6px 0 0 0
+						+border-radius(10px)
+						background: $color-brown
+						line-height: 0
+						text-decoration: none
+						color: #fff
+						font-weight: 200
+						text-align: center
+						margin: 5px 12px 0px -24px
+					
+	.user-search-results
+		width: 99%
+		+border-radius(3px)
+		font-family: $font-family
+		font-size: 1em
+		border: solid 1px #e0e0e0
+		overflow: auto
+		max-height: 204px 
+		
+		.no-results
+			height: 100px
+			text-align: center
+			line-height: 100px
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+			
+			li
+				width: 100%
+				
+				a
+					padding: 3px 0 3px 0
+					display: block
+					width: 100%
+					color: #000
+					text-decoration: none
+					
+					&:hover
+						background: $color-brown-light
+				
+					img
+						max-width: 25px
+						margin: 0 5px 0 5px
+						float: left
+						+border-radius(3px)
+					
+	.device-select-field
+	
+		.device-list
+			width: 98%
+			+border-radius(3px)
+			+background(linear-gradient(#f6f6f6, #fff))
+			margin-bottom: 10px
+			padding: 0px 3px 3px 5px
+			font-family: $font-family
+			font-size: 1em
+			border: solid 1px #e0e0e0
+			&:focus
+				border-color: $color-brown
+			&.error
+				border-color: $color-red
+			
+			ul
+				list-style: none
+				margin: 0
+				padding: 0
+			
+				input[type="text"]
+					margin: 0
+					border: none
+					width: 570px
+					background: none
+					padding: 0
+				
+				li
+					display: inline-table
+					padding: 3px 0 0 0
+					
+					span
+						padding: 5px 25px 5px 8px
+						background: $color-brown-light
+						+border-radius(3px)
+						margin-right: 3px
+						
+						img
+							max-width: 25px
+							margin: 0 5px 0 5px
+							float: left
+							+border-radius(3px)
+						
+					.delete-device 
+						width: 17px
+						height: 11px
+						position: absolute
+						padding: 6px 0 0 0
+						+border-radius(10px)
+						background: $color-brown
+						line-height: 0
+						text-decoration: none
+						color: #fff
+						font-weight: 200
+						text-align: center
+						margin: 5px 12px 0px -24px
+					
+	.device-search-results
+		width: 99%
+		+border-radius(3px)
+		font-family: $font-family
+		font-size: 1em
+		border: solid 1px #e0e0e0
+		overflow: auto
+		max-height: 204px 
+		
+		.no-results
+			height: 100px
+			text-align: center
+			line-height: 100px
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+			
+			li
+				width: 100%
+				
+				a
+					padding: 3px 0 3px 0
+					display: block
+					width: 100%
+					color: #000
+					text-decoration: none
+					
+					&:hover
+						background: $color-brown-light
+				
+					img
+						max-width: 25px
+						margin: 0 5px 0 5px
+						float: left
+						+border-radius(3px)
+										
+	input[type="text"], input[type="password"], input[type="email"]
+		+border-radius(3px)
+		+background(linear-gradient(#f6f6f6, #fff))
+		margin-bottom: 10px
+		font-family: $font-family
+		font-size: 1em
+		border: solid 1px #e0e0e0
+		&:focus
+			border-color: $color-brown
+		&.error
+			border-color: $color-red
+
+	input[type="file"]
+		padding: 10px 10px 14px 10px
+		width: 96%
+		height: 21px
+		+border-radius(3px)
+		+background(linear-gradient(#f6f6f6, #fff))
+		font-family: $font-family
+		font-size: 1em
+		border: solid 1px #e0e0e0
+		-webkit-appearance: none
+		text-align: left
+		-webkit-rtl-ordering:  left
+		&:focus
+			border-color: $color-brown
+		&.error
+			border-color: $color-red
+
+	input[type="file"]::-webkit-file-upload-button
+		-webkit-appearance: none
+		float: right
+		margin: 0 0 0 10px
+		border: 1px solid #aaaaaa
+		+border-radius(4px)
+		background-image: -webkit-gradient(linear, left bottom, left top, from(#d2d0d0), to(#f0f0f0))
+		background-image: -moz-linear-gradient(90deg, #d2d0d0 0%, #f0f0f0 100%)
+
+	textarea
+		width: 95%
+		height: emCalc(150px)
+		+border-radius(3px)
+		+background(linear-gradient(#f6f6f6, #fff))
+		margin-bottom: 10px
+		font-family: $font-family
+		font-size: 1em
+		border: solid 1px #e0e0e0
+		&:focus
+			border-color: $color-brown
+		&.error
+			border-color: $color-red
+			
+	select
+		width: 99%	
+
+	input[type="submit"]
+		@extend %btn-green
+		display: inline-block
+		float: right
+		font-family: $font-family
+		font-size: emCalc(20px)
+		margin-bottom: emCalc(10px)
+		&.delete
+			@extend %btn-red
+			float: left
+		
+	input[type="submit"].search-button
+		position: absolute
+		margin: 5px 0px 0px -92px
+		
+	&.generic
+		input[type="text"], input[type="password"], input[type="email"]
+			width: 95%
+
+		.forgot-create
+			float: none
+			li
+				float: left
+				
+	.select
+		margin-bottom: 10px
+		
+	.date-two-fields
+
+		select
+			width: 49%
+	.tooltip
+		position: absolute
+		margin-top: -40px
+		right: 15px
+		width: 20px
+		height: 20px
+		+border-radius(10px)
+		background: $color-brown-light
+		color: $color-brown
+		font-size: 1.1em
+		line-height: 1.1em
+		text-align: center
+		&.push-form-tooltips
+			right: 50px
+		&.push-form-action-tooltips
+			right: 34px
+			
+	.config
+		fieldset
+			margin-bottom: 20px
+
+	#map-geo-location
+		width: 725px
+		height: 300px
+		margin-bottom: 20px
+	
+	.user-overlay
+		height: 130px
+		position: absolute
+		width: 200px
+		background: $color-brown-light
+		margin-top: -320px
+		z-index: 1
+		+opacity(0.9)
+		
+	.user-info
+		height: 130px
+		position: absolute
+		width: 200px
+		margin-top: -320px
+		z-index: 2
+		text-align: center
+		padding: 34px 20px 20px 20px
+
+		a.close:link, a.close:hover, a.close:visited, a.close:active 
+			display: block
+			position: absolute
+			width: 20px
+			height: 12px
+			margin: -29px 0px 0px 154px
+			padding-top: 8px
+			+border-radius(10px)
+			background: $color-brown
+			line-height: 0
+			text-decoration: none
+			color: #fff
+			font-weight: 200
+					
+		.device-userid
+			position: absolute
+			margin: -30px 0 0 0
+			width: 140px
+			text-align: left
+			float: left
+			font-size: 0.8em
+			font-weight: bold
+			text-overflow: ellipsis
+			overflow: hidden
+			
+		.device-user
+			margin: 14px 0 0 0
+			float: left
+			
+			.avatar
+				max-width: 100px
+				+border-radius(5px)
+				
+					
+		@each $platform in WP8, Websockets, BlackBerry, iOS, Android, Web, Windows, Mac
+			.#{$platform}
+				+icon("i-#{$platform}")
+					color: $color-brown
+					font-size: emCalc(35px)
+					+hide-text	
+		.device-phone
+			margin-right: 40px
+			float: right
+			display: inline-block
+			text-align: center
+			width: 38px
+			height: 69px
+			background: url('/images/iphone.png') no-repeat 0 0 transparent
+
+			.bubble
+				position: absolute
+				width: 20px
+				height: 20px
+				+border-radius(20px)
+				background: #fff
+				font-size: 0.7em
+				line-height: 1.8em
+				padding: 0
+			
+				&.app-version
+					width: 30px
+					float: right
+					margin:  0px 0 0 14px
+					
+				&.language
+					margin:  0px 0 0 -8px
+
+			.os-version
+				position: absolute
+				width: 38px
+				font-size: 0.5em
+				margin: 30px 0 0 0px
+				
+			.device-string
+				position: absolute
+				font-size: 0.7em
+				width: 41px
+				font-size: 0.5em
+				font-weight: bold
+				margin: 70px 0 0 0px
+				line-height: 10px
+				white-space: nowrap
+				overflow: hidden
+				text-overflow: ellipsis
+				
+			.platform
+				width: 38px
+				position: absolute
+				font-size: 0.6em
+				font-weight: bold
+				margin: 18px 0 0 0px
+			
+		.device-tablet
+			display: inline-block
+			text-align: center
+			width: 53px
+			height: 69px
+			background: url('/images/ipad.png') no-repeat 0 0 transparent
+			.bubble
+				position: absolute
+				width: 20px
+				height: 20px
+				+border-radius(20px)
+				background: #fff
+				font-size: 0.7em
+				line-height: 1.8em
+				padding: 0
+			
+				&.app-version
+					width: 30px
+					float: right
+					margin:  0px 0 0 30px
+					
+				&.language
+					margin:  0px 0 0 -8px
+
+			.os-version
+				position: absolute
+				width: 53px
+				font-size: 0.5em
+				margin: 30px 0 0 0px
+				
+			.device-string
+				position: absolute
+				font-size: 0.7em
+				width: 55px
+				font-size: 0.5em
+				font-weight: bold
+				margin: 70px 0 0 0px
+				line-height: 10px
+				white-space: nowrap
+				overflow: hidden
+				text-overflow: ellipsis
+				
+			.platform
+				width: 53px
+				position: absolute
+				font-size: 0.6em
+				font-weight: bold
+				margin: 18px 0 0 0px
+
+
+		.device-desktop
+			display: inline-block
+			text-align: center
+			width: 85px
+			height: 69px
+			background: url('/images/desktop.png') no-repeat 0 0 transparent
+			.bubble
+				position: absolute
+				width: 20px
+				height: 20px
+				+border-radius(20px)
+				background: #fff
+				font-size: 0.7em
+				line-height: 1.8em
+				padding: 0
+			
+				&.app-version
+					width: 30px
+					float: right
+					margin:  0px 0 0 60px
+					
+				&.language
+					margin:  0px 0 0 -8px
+
+			.os-version
+				position: absolute
+				width: 85px
+				font-size: 0.5em
+				margin: 20px 0 0 0px
+				
+			.device-string
+				position: absolute
+				font-size: 0.7em
+				width: 85px
+				font-size: 0.5em
+				font-weight: bold
+				margin: 70px 0 0 0px
+				line-height: 10px
+				white-space: nowrap
+				overflow: hidden
+				text-overflow: ellipsis
+				
+			.platform
+				width: 85px
+				position: absolute
+				font-size: 0.6em
+				font-weight: bold
+				margin: 8px 0 0 0px					
+	#map
+		width: 725px
+		height: 300px
+		margin-bottom: 20px
+		
+	.map-overlay
+		position: absolute
+		width: 730px
+		height: 300px
+		margin-top: -320px
+		
+		.bg-marker-edit-box
+			position: absolute
+			width: 730px
+			height: 300px
+			background: #fff
+			+opacity(0.7)
+			z-index: 1
+			
+		.marker-edit-box
+			position: absolute
+			width: 730px
+			height: 300px
+			text-align: center
+			padding: 30px 0 0 0
+			z-index: 2
+		
+			input[type='text'], textarea
+				width: 50%
+			textarea
+				height: 80px
+				
+			.save-marker
+				@extend %btn-green
+				display: inline-block
+				float: left
+				margin: 0 0 0 23%
+				width: 395px
+				
+			.delete-marker
+				@extend %btn-red
+				display: inline-block
+				float: left
+				margin: 5px 0 0 23%
+				width: 395px
+	.radius-selector
+		position: absolute
+		margin: 4px 0 0 580px
+		z-index: 999
+		
+		select
+			width: 140px
+
+.notice
+	+border-radius($default-radius)
+	padding: emCalc(10px)
+	background: $color-green
+	margin-bottom: 15px
+	color: #fff
+	&.error
+		background: $color-red
+	&.info
+		background: $color-blue-light
+	a
+		color: #fff

@@ -1,0 +1,256 @@
+// Modules - Reusable chunks
+%default-font-family
+	font-family: $font-family
+%default-font-size
+	font-size: emCalc($default-font-size,16px)
+%default-line-size
+	line-height: emCalc($default-line-height)
+
+%default-font-styling
+	@extend %default-font-family
+	@extend %default-font-size
+	@extend %default-line-size
+	font-weight: 300
+
+%clear-list
+	padding: 0
+	margin: 0
+	list-style: none
+
+%circle-shape
+	+border-radius(50%)
+	display: inline-block
+	text-align: center
+	overflow: hidden
+
+%circle-box
+	@extend %circle-shape
+	//width: emCalc(40px, 24px)
+	//height: emCalc(40px, 24px)
+	//font-size: emCalc(24px)
+	//line-height: emCalc(40px, 24px)
+	color: #fff !important
+	background: $font-color
+
+%clearfix
+	&:before,	&:after
+		content: " "
+		display: table
+	&:after
+		clear: both
+	@if $legacy-support-for-ie == false
+		zoom: 1
+
+%fleximage
+	max-width: 100%
+	width: 100%
+	height: auto
+
+%dl-basic
+	@extend %clearfix
+	dt, dd
+		margin-bottom: 10px
+	dt
+		float: left
+		clear: left
+		font-weight: bold
+	dd
+		float: left
+		margin: 0
+
+// Button styling
+%btn-styling
+	display: inline-block
+	padding: 5px 15px
+	color: #fff
+	//background: $color-green
+	font-weight: 200
+	text-decoration: none
+
+@each $color in "darkblue", "blue", "red", "brown", "green"
+	%btn-#{$color}, .btn-#{$color}
+		+btn($color)
+		+border-radius($default-radius)
+
+/* Foresight */
+.fs-img
+	font-family: 'image-set( url({src}) 1x, url({directory}{filename}_2x.{ext}) 2x)'
+	display: none
+
+.plus
+	font-family: $font-family
+	width: 18px
+	height: 18px
+	display: inline-block
+	margin-right: 20px
+	+data-uri-bg("i-add.png", no-repeat)
+
+// Table styling
+%table-basic
+	width: 100%
+	margin-bottom: 30px
+	//font-size: emCalc(18px)
+
+	tr
+		border-bottom: solid 1px #fff
+
+	th, td
+		padding: emCalc(15px, 18px)
+		background: $color-brown-light
+
+	img
+		vertical-align: middle
+		max-height: 69px
+
+table
+	@extend %table-basic
+		
+	.date
+		font-weight: bold
+
+	.nothing
+		padding: 35px
+		text-align: center
+
+	.center
+		text-align: center
+
+	.right
+		text-align: right
+	.left
+		text-align: left
+
+	.star
+		position: static
+
+	.small
+		//font-size: 0.8em
+
+	.date-col
+		width: 150px
+		//font-size: 0.9em
+
+	.check,
+	.icon,
+	.narrow
+		width: 1%
+		padding: 15px 10px
+		
+	.fixed
+		width: 70px
+
+		img
+			max-width: 50px
+
+	.timeago
+		width: 150px
+
+	.author
+		display: block
+		//font-size: 0.8em
+
+	.status
+		width: 5px
+		padding: 0
+
+		&.solved
+			background: $color-green
+
+		&.pending
+			background: #d56351
+
+	.message-box
+		//font-size: 0.8em
+		color: #fff
+		padding: 10px
+		margin: 20px 0
+		background: $color-brown
+		+border-radius(5px)
+		overflow: hidden
+
+	.buttons
+		float: right
+		margin: 20px 0 0 0
+
+	&.news-lists
+		//font-size: 1em
+
+		td
+			padding: 0
+
+		.news-content
+			padding: 15px
+			//font-size: 1.4em
+
+		h3
+			margin: 0
+			padding: 8px 15px
+			//font-size: 1.8em
+			font-family: $font-family
+			text-align: left
+			background: $color-brown
+	.cleared
+		td
+			background: #EAEAEA
+
+// Appstore lists
+.appstore
+	@extend %clear-list
+	li
+		+hide-text
+		height: 50px
+		margin-bottom: 10px
+
+	a
+		width: 150px
+		height: 50px
+		display: block
+
+	@each $app in google, apple
+		.#{$app}
+			+data-uri-bg("app-#{$app}.png", no-repeat)
+
+	.google
+		width: 154px
+		margin-left: 0
+
+//// Check to be deleted
+//.header3
+//	+handWritingBold
+//	margin: 5px 0 25px
+//	//font-size: 5em
+//	line-height: 1
+//
+//// Can be removed after checking.
+//.btn
+//	display: inline-block
+//	padding: 5px 15px
+//	color: #fff
+//	+border-radius($default-radius)
+//	background: $color-green
+//	font-weight: 100
+//
+//	&.sky
+//		font-family: $font-family
+//		background: $color-blue
+//
+//	&.alert
+//		font-family: $font-family
+//		background: $color-red
+//		+text-shadow(rgba(0, 0, 0, 0.4) 0 -1px 0)
+//
+//	&.dark
+//		font-family: $font-family
+//		background: $font-color
+//
+//	.add
+//		font-family: $font-family
+//		width: 18px
+//		height: 18px
+//		display: inline-block
+//		margin-right: 20px
+//		+data-uri-bg("i-add.png", no-repeat)
+//
+//	&:hover
+//		color: #fff !important
+//		background: $font-color !important

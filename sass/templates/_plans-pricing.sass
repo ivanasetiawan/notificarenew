@@ -1,0 +1,220 @@
+// Plans and Pricing
+.plans-lists
+	@extend %clear-list
+	overflow: hidden
+
+	li
+		@extend %spacing-block
+		@extend %block-1
+		list-style: none
+		padding-bottom: 0
+
+		&:first-child
+			margin-left: 0
+
+.plan-price
+	text-align: center
+	color: $color-brown
+
+	> p
+		position: relative
+		display: inline-block
+		padding:  0 emCalc(40px) 0 emCalc(25px)
+		margin: 0
+		line-height: 1
+
+	.currency, .month
+		position: absolute
+
+	.currency
+		top: 12px
+		left: 0
+		font-size: emCalc(36px)
+
+	.price
+		font-size: emCalc(100px)
+		font-weight: 500
+
+	.month
+		bottom: 8px
+		font-size: emCalc(24px)
+
+.plan-description
+	text-align: center
+
+.order-plan
+	a
+		+btn("blue")
+		+border-radius($default-radius)
+		display: block
+		padding: emCalc(5px) 0 emCalc(7px)
+		text-align: center
+		font-size: emCalc(24px)
+
+.plan-details
+	width: emCalc(280px)
+	margin-left: emCalc(-20px)
+	padding: 0 emCalc(20px) emCalc(20px)
+	background: #f8f5f3
+	border-top: solid 1px $color-brown-light
+
+.def-list
+	@extend %dl-basic
+	dt
+		width: emCalc(120px)
+	dd
+		width: emCalc(160px)
+
+	.users
+		color: $color-green
+		font-weight: 500
+
+	.smartness
+		width: emCalc(280px)
+		float: none
+		clear: left
+
+		ul
+			@extend %clear-list
+
+		li
+			margin: 0 0 emCalc(5px)
+			background: none
+
+%icon-bg
+	@extend %circle-shape
+	width: emCalc(35px)
+	height: emCalc(35px)
+	text-align: center
+	margin-bottom: emCalc(5px)
+	line-height: emCalc(52px)
+	display: inline-block
+	background: #fff
+
+.feature-pushes
+	@extend %clear-list
+	@extend %clearfix
+	li
+		width: emCalc(100px)
+		float: left
+		position: relative
+		padding: emCalc(5px) 0 emCalc(5px) emCalc(40px)
+		+opacity(0.3)
+		&.active
+			+opacity(1)
+	span
+		@extend %icon-bg
+		top: emCalc(2px)
+		left: 0
+		position: absolute
+		line-height: 2.8em
+
+	@each $push in alert, compass, images, star, map
+		.#{$push}
+			+icon("i-#{$push}")
+				color: $color-brown
+				font-size: emCalc(30px)
+
+.platforms
+	span
+		@extend %icon-bg
+		line-height: 2.8em
+		
+	@each $platform in WP8, Websockets, BlackBerry, iOS, Android
+		.#{$platform}
+			+icon("i-#{$platform}")
+				color: $color-brown
+				font-size: emCalc(30px)
+
+.free-plan
+	@extend %block-2
+	a
+		display: inline-block
+		padding: emCalc(5px) emCalc(15px) emCalc(7px)
+
+.payment-info
+	@extend %block-1
+	h3
+		font-size: emCalc(12px)
+		text-transform: uppercase
+		text-align: center
+		color: $color-brown
+	ul
+		@extend %clear-list
+	li
+		+hide-text
+		float: left
+		
+	img 
+		margin: emCalc(15px) emCalc(0px) emCalc(10px) emCalc(8px)
+		
+.free-plan-top
+	@extend %block-2
+	a
+		display: inline-block
+		padding: emCalc(5px) emCalc(15px) emCalc(7px)
+
+.payment-info-top
+	@extend %block-1
+	text-align: center
+	h3
+		font-size: emCalc(12px)
+		text-transform: uppercase
+		text-align: center
+		color: $color-brown
+	ul
+		@extend %clear-list
+	li
+		+hide-text
+		float: left
+		
+	img 
+		margin: emCalc(15px) emCalc(0px) emCalc(10px) emCalc(8px)
+		
+	p
+		margin-bottom: 26px
+
+.call-us
+	float: left
+	width: 100%
+	margin: emCalc(20px) 0 emCalc(30px)
+	text-align: center
+
+.testimonials
+	@extend %block-2
+	height: 250px
+	overflow: hidden
+
+	p
+		margin: 0 0 emCalc(20px)
+
+	.carousel
+		
+		height: auto
+		padding: 0
+
+	.carousel-content
+		height: auto
+
+	.carousel-loader
+		top: -56px
+		right: 0
+		position: absolute
+		li
+			a
+				+opacity(0.6)
+				background: $color-brown
+			&.active a, &:hover a
+				+opacity(1)
+
+	.author-img
+		width: emCalc(150px)
+		height: emCalc(150px)
+		float: left
+		margin-right: emCalc(20px)
+
+		img
+			position: static
+
+.support
+	@extend %block-1

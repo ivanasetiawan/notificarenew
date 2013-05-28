@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	ReWriteCond %{REQUEST_FILENAME} !-f
+	ReWriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*) /index.php?routing=$1 [QSA,L]
+</IfModule>

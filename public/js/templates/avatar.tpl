@@ -1,0 +1,1 @@
+<img src="${avatar.picture}" class="avatar" alt="">
